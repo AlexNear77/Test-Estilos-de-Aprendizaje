@@ -1,0 +1,95 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/* Esto le da una base a toda la pagina, color al fondo a las letras y estilo */
+body {
+	background: #E9ECF4;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+}
+.cuerpo{
+   width: 90%;
+   max-width: 1000px;
+   margin: 17px auto;
+   display: grid;
+   /*el grid gap le da espacio entre los contenedores*/
+   grid-gap: 21px;
+   
+   /* especificas las columnas que quiere tener la pagima*/
+   grid-template-columns: repeat(3, 1fr);
+   /* especificas las filas que quiere tener la pagina */
+   grid-template-rows: repeat(3, auto);
+
+   grid-template-areas: "cabezera cabezera cabezera"
+                        "opcion_1 opcion_2 opcion_3"
+                        "texto_1 texto_2 texto_3"                       
+                        ;
+}
+
+.cuerpo .cabezera
+ {
+	background: #c8e6f5;
+	padding: 0.5px;
+   border-radius: 400px;
+   height: 77px;
+
+   grid-area: cabezera;
+}
+
+.cuerpo .opcion_1{
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   grid-area: opcion_1;
+}
+
+.cuerpo .opcion_2{
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   grid-area: opcion_2;
+}
+
+.cuerpo .opcion_3{
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   grid-area: opcion_3;
+}
+
+.cuerpo .texto_1{
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   grid-area: texto_1;
+}
+
+.cuerpo .texto_2{
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   grid-area: texto_2;
+}
+
+.cuerpo .texto_3{
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   grid-area: texto_3;
+}
+
+h3{
+   font-size: 27px;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}

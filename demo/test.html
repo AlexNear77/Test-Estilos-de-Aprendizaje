@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <!-- EL CIRCULO CARGANDO pag: materialize-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <!-- EL FADE IN DOWN pag: animated.css-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+   <!-- css grid y fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+	<link rel="stylesheet" href="test.css">
+
+   <title>Test</title>
+</head>
+<body>
+
+   <div class="center section" id="circulo">
+         <h1 class="blue-text">Cargando</h1>
+
+         <div class="preloader-wrapper big active">
+               <div class="spinner-layer spinner-blue-only">
+                 <div class="circle-clipper left">
+                   <div class="circle"></div>
+                 </div><div class="gap-patch">
+                   <div class="circle"></div>
+                 </div><div class="circle-clipper right">
+                   <div class="circle"></div>
+                 </div>
+               </div>
+             </div>
+   </div>
+
+
+   <div class="hide" id="contenido">
+         <header class="cabezera">
+               <h3>¿Qué tipo de examen realizas con mayor facilidad?</h3>
+            </header>
+
+         <div class="opcion_1">
+            <img src="pregunta1-opc1.jpg" alt="opcion 1" height="200px" width="200px">
+         </div>
+
+         <div class="texto_1">
+            <p>Examen escrito</p>          
+         </div>
+         
+         <div class="opcion_2">
+            <img src="pregunta1-opc2.jpg" alt="opcion 2" height="200px" width="200px">
+         </div>
+
+         <div class="texto_2">
+            <p>Examen escrito</p>   
+         </div>
+         
+         <div class="opcion_3">
+            <img src="pregunta1-opc3.jpg" alt="opcion 3" height="200px" width="200px">
+         </div>
+
+         <div class="texto_3">
+            <p>Examen escrito</p>    
+         </div>   
+      </div>
+
+   
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+   <script>
+
+      
+      window.addEventListener('load', () => {
+
+         setTimeout(carga,2000);
+
+         function carga(){
+            document.getElementById('circulo').className = 'hide';
+            document.getElementById('contenido').className = 'cuerpo animated fadeInDown'; // se sustituye la clase por otra en este caso un center para centrarlo valga la...
+         }
+
+      })
+   </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/* Esto le da una base a toda la pagina, color al fondo a las letras y estilo */
+body {
+	background: #E9ECF4;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+.contenedor{
+   width: 90%;
+   max-width: 1000px;
+   margin: 20px auto;
+   display: grid;
+   /*el grid gap le da espacio entre los contenedores*/
+   grid-gap: 14px;
+   
+   /* especificas las columnas que quiere tener la pagima*/
+   grid-template-columns: repeat(5, 1fr);
+   /* especificas las filas que quiere tener la pagina */
+   grid-template-rows: repeat(6, auto);
+
+   /* este grid se aplica a todos los contenedores y se aplica para ser responsiva la pagina*/
+   grid-template-areas: "cabezera cabezera cabezera cabezera cabezera"
+                        "contenido contenido contenido contenido visual"
+                        "contenido contenido contenido contenido kinestesico"
+                        "contenido contenido contenido contenido auditivo"
+                        "boton boton boton boton boton"
+                        "importante importante importante importante importante";
+
+}
+
+.contenedor > div,
+.contenedor .cabezera,
+.contenedor .contenido,
+   a
+ {
+	background: #c8e6f5;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.contenedor .cabezera {
+	background: #12203E;
+	color: #fff;
+   grid-column-start: 1;
+   grid-column-end: -1;
+ 
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   grid-area: cabezera;
+}
+
+.contenedor .contenido{
+   grid-area: contenido;
+}
+
+.contenedor .contenido .lista{
+   padding: 14px;
+}
+
+.contenedor .visual{
+   width: 120px;
+   height: 120px;
+   background: none;
+   grid-area: visual;
+}
+.contenedor .kinestesico{
+   width: 120px;
+   height: 120px;
+   background: none;
+   grid-area: kinestesico;
+}
+
+.contenedor .auditivo{
+   width: 120px;
+   height: 120px;
+   background: none;
+   grid-area: auditivo;
+}
+
+.contenedor .importante{
+   background: #FAA43D;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   grid-area: importante;
+}
+
+.contenedor .contenido .recomendacion{
+   color: #c21010;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.contenedor .contenido .titulo{
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.contenedor .boton{
+   min-height: 70px;
+
+   grid-area: boton;
+}
+
+h3{padding: 3px;}
+img{width: 120px; height: 120px;}
+
+/* Aqui se le aplica lo responsivo a la pagina al momento de hacerla pequeña cambia el tamaño de cada uno de los contenedores , puedes hacer la prueba colocando color engro dentro del body de esta forma 
+body{
+   color: negro;
+}
+*/
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "cabezera cabezera cabezera cabezera cabezera"
+                        "contenido contenido contenido contenido contenido"
+                        "boton boton boton boton boton"
+                        "visual visual kinestesico auditivo auditivo"
+                        "importante importante importante importante importante";
+      
+   }
+}
